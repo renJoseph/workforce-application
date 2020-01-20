@@ -1,15 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProfileHomeComponent } from './components/profile-home/profile-home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProfileHomeComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule
   ],
   providers: [],

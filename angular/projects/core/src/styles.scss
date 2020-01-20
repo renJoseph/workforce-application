@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+$dark: rgb(30, 30, 30);
+$light: rgb(225,225,225);
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
