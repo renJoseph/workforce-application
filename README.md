@@ -1,11 +1,13 @@
 # workforce-application
 
 Approach
+
 You have been assigned to work on a project by ABC consulting group. ABC consulting has approved your bid to develop an appropriate artefact (e.g. a technical solution which can be a piece of software, robot model, computer game etc.) related to your chosen area which has to be agreed by your workshop tutor. 
 
 You will present your completed project to the board of ABC consulting group in your final presentation along with evidence log. Your evidence log should provide evidence of the following assignment tasks/artefacts. This is an individual task to demonstrate your ability to review and apply a software development model to facilitate the delivery of the intended artefact.
 
 Assignment Tasks:
+
 You will adhere to the following requirements while working towards the delivery of the technical solution:
 
     1. Define a technical problem to solve in this assignment. Your choice of the problem should be supported by a demonstration of its significance to the business; and should require that you develop an appropriate technical solution.
