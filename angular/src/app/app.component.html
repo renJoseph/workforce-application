@@ -1,12 +1,14 @@
 <div class="navbar row">
-    <div class="dropdown-menu col" style="float: left;">
-        <p>boop</p>
+    <img class="logo" src="assets/wf-logo.png">
+    <!-- ngFor loop goes here to display pages user has access to based on Oauth2 when implemented -->
+    <div class="page-item">
+        <div class="btn">Info</div>
     </div>
-    <div class="page-title">
-        <p>big boop</p>
+    <div class="page-item">
+        <div class="btn">Admin</div>
     </div>
-    <div class="account-menu col" style="float: right;">
-        <p>boop</p>
-    </div>
+    <div class="navbar-center"></div>
+    <img class="icon" src="assets/profile.png">
 </div>
+<hr>
 <router-outlet></router-outlet>
