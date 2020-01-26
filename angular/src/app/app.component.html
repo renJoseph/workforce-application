@@ -1,14 +1,21 @@
 <div class="navbar row">
+    <img mat-button [matMenuTriggerFor]="afterMenu" class="menu icon" src="assets/menu.png">
+    <mat-menu #afterMenu="matMenu" xPosition="after">
+        <!-- ngFor loop goes here to display pages user has access to based on Oauth2 when implemented -->
+        <button mat-menu-item>Complaints</button>
+        <button mat-menu-item>Relocation</button>
+        <button mat-menu-item>Holidays</button>
+    </mat-menu>
+    <div class="col"></div>
     <img class="logo" src="assets/wf-logo.png">
-    <!-- ngFor loop goes here to display pages user has access to based on Oauth2 when implemented -->
-    <div class="page-item">
-        <div class="btn">Info</div>
-    </div>
-    <div class="page-item">
-        <div class="btn">Admin</div>
-    </div>
-    <div class="navbar-center"></div>
-    <img class="icon" src="assets/profile.png">
+    <div class="col"></div>
+    <img mat-button [matMenuTriggerFor]="beforeMenu" class="icon" src="assets/profile.png">
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button mat-menu-item>Profile</button>
+        <button mat-menu-item>Complaints</button>
+        <button mat-menu-item>Relocation</button>
+        <button mat-menu-item>Holiday</button>
+        <button mat-menu-item>Sign Out</button>
+    </mat-menu>
 </div>
-<hr>
 <router-outlet></router-outlet>

@@ -1,13 +1,6 @@
 $navbar-txt-colour: black;
 $font-small: calc(20px + 0.5vw);
 
-.body{
-    width: 100vw;
-    height: 100vh;
-    border: 0px;
-    padding: 0px;
-    margin: 0px;
-}
 .row{
     display: flex;
     flex-direction: row;
@@ -15,15 +8,22 @@ $font-small: calc(20px + 0.5vw);
 .col{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .navbar{
     color: $navbar-txt-colour;
     text-align: center;
     align-items: center;
     margin: 5px;
+    margin-bottom: 15px;
+}
+.menu{
+    margin-right: 1vw;
+    margin-left: 1vw;
 }
 .logo{
     height: 5vh;
+    width: 18vh;
     min-height: 50px;
     border-radius: 20px;
 }
@@ -40,7 +40,8 @@ $font-small: calc(20px + 0.5vw);
 .icon{
     height: 5vh;
     min-height: 40px;
-    margin-right: 3vw;
+    margin-right: 1.5vw;
+    margin-left: 1.5vw;
 }
 .row{
     display: flex;

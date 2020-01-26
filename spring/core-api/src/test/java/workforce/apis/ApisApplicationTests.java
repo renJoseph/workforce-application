@@ -1,10 +1,10 @@
-package individualproject.springworkforce;
+package workforce.apis;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringWorkforceApplicationTests {
+class ApisApplicationTests {
 
     @Test
     void contextLoads() {

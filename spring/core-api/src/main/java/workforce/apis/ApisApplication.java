@@ -1,13 +1,13 @@
-package individualproject.springworkforce;
+package workforce.apis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringWorkforceApplication {
+public class ApisApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringWorkforceApplication.class, args);
+        SpringApplication.run(ApisApplication.class, args);
     }
 
 }
