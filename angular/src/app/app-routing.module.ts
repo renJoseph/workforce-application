@@ -14,6 +14,14 @@ const routes: Routes = [
   {
     path: "profile",
     loadChildren: () => import('../../projects/profile/src/app/app.module').then(m => m.AppModule)
+  },
+  {
+    path: "complaints",
+    loadChildren: () => import('../../projects/complaints/src/app/app.module').then(m => m.AppModule)
+  },
+  {
+    path: "requests",
+    loadChildren: () => import('../../projects/requests/src/app/app.module').then(m => m.AppModule)
   }
 ];
 

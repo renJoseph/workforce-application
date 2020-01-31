@@ -1,0 +1,13 @@
+<div class="main-container centred">
+    <h1>The Employee Management Portal</h1>
+    <hr>
+    <br>
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile
+        *ngFor="let tile of tiles"
+        routerLink="{{tile.application.route}}"
+        [style.background]="tile.colour">
+        {{tile.application.name}}
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

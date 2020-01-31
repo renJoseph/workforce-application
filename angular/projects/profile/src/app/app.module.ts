@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProfileHomeComponent } from './components/profile-home/profile-home.component';
+import { ProfileHomeComponent } from './profile-home/profile-home.component';
 
 @NgModule({
   declarations: [
