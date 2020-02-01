@@ -1,19 +1,18 @@
 <div class="navbar row">
     <img mat-button [matMenuTriggerFor]="afterMenu" class="menu" src="assets/menu.png">
     <mat-menu #afterMenu="matMenu" xPosition="after">
-        <!-- ngFor loop goes here to display pages user has access to based on Oauth2 when implemented -->
-        <button mat-menu-item>Home</button>
-        <button mat-menu-item>Request Forms</button>
-        <button mat-menu-item>Complaints</button>
-        <button mat-menu-item>Admin</button>
+        <button mat-menu-item *ngFor="let app of appService.apps" routerLink="{{app.route}}">
+            {{app.name}}
+        </button>
     </mat-menu>
     <div class="col"></div>
-    <img class="logo" src="assets/wf-logo.png">
+    <img class="logo" src="assets/wf-logo.png" routerLink="">
     <div class="col"></div>
     <img mat-button [matMenuTriggerFor]="beforeMenu" class="icon" src="assets/profile.png">
     <mat-menu #beforeMenu="matMenu" xPosition="before">
-        <button mat-menu-item>Profile</button>
-        <button mat-menu-item>Requests</button>
+        <button mat-menu-item *ngFor="let app of profileAppService.apps" routerLink="{{app.route}}">
+            {{app.name}}
+        </button>
         <button mat-menu-item>Sign Out</button>
     </mat-menu>
 </div>

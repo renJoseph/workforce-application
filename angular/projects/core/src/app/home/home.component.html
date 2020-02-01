@@ -4,7 +4,7 @@
     <br>
     <mat-grid-list cols="2" rowHeight="2:1">
         <mat-grid-tile
-        *ngFor="let tile of tiles"
+        *ngFor="let tile of appTileService.tiles"
         routerLink="{{tile.application.route}}"
         [style.background]="tile.colour">
         {{tile.application.name}}

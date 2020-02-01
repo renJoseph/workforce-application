@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { WorkforceApplicationTileModel } from 'src/models/wf-app-tile.model';
+import { ApplicationTilesService } from 'src/services/application-tiles.service';
 
 @Component({
   selector: 'app-home',
@@ -8,14 +8,9 @@ import { WorkforceApplicationTileModel } from 'src/models/wf-app-tile.model';
 })
 export class HomeComponent {
 
-  tiles: WorkforceApplicationTileModel[] = [
-    { application: { number: 1, name: 'Edit Profile', route: 'profile' }, colour: 'lightblue' },
-    { application: { number: 2, name: 'Submit Requests', route: 'requests' }, colour: 'lightgreen' },
-    { application: { number: 3, name: 'File Complaints', route: 'complaints' }, colour: 'lightpink' },
-    { application: { number: 4, name: 'Administration', route: 'admin' }, colour: 'lightyellow' }
-  ]
-
-  constructor() { }
+  constructor(
+    public appTileService: ApplicationTilesService
+  ) { }
 
   ngOnInit() {
   }
