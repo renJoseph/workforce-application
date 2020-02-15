@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { AdminHomeDataSource, AdminHomeItem } from './admin-home-datasource';
+import { UsersService } from 'src/services/users.service';
 
 @Component({
   selector: 'app-admin-home',
@@ -10,16 +11,21 @@ import { AdminHomeDataSource, AdminHomeItem } from './admin-home-datasource';
   styleUrls: ['./admin-home.component.scss']
 })
 export class AdminHomeComponent implements AfterViewInit, OnInit {
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: false}) sort: MatSort;
-  @ViewChild(MatTable, {static: false}) table: MatTable<AdminHomeItem>;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
+  @ViewChild(MatTable, { static: false }) table: MatTable<AdminHomeItem>;
   dataSource: AdminHomeDataSource;
 
+  constructor(private users: UsersService) { }
+
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['id', 'role', 'firstName', 'lastName', 'email', 'password', 'dob'];
 
   ngOnInit() {
     this.dataSource = new AdminHomeDataSource();
+    this.users.getAllUsers().subscribe((data: any) =>{
+      this.dataSource.data = data;
+    })
   }
 
   ngAfterViewInit() {
