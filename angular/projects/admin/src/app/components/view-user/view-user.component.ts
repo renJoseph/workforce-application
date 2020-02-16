@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from 'src/services/users.service';
+import { ActivatedRoute } from '@angular/router';
+import { User } from 'src/models/user.model';
 
 @Component({
   selector: 'app-view-user',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewUserComponent implements OnInit {
 
-  constructor() { }
+  public userData: User;
+
+  constructor(
+    private user: UsersService,
+    private aR: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    let id = this.aR.snapshot.params.id;
+    this.user.getUserByID(id).subscribe((data) => {
+      this.userData = data;
+      console.log(this.userData);
+    });
   }
 
 }

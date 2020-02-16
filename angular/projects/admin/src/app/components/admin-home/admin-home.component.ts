@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { AdminHomeDataSource, AdminHomeItem } from './admin-home-datasource';
 import { UsersService } from 'src/services/users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-home',
@@ -16,7 +17,8 @@ export class AdminHomeComponent implements AfterViewInit, OnInit {
   @ViewChild(MatTable, { static: false }) table: MatTable<AdminHomeItem>;
   dataSource: AdminHomeDataSource;
 
-  constructor(private users: UsersService) { }
+  constructor(private users: UsersService,
+    private router: Router) { }
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id', 'role', 'firstName', 'lastName', 'email', 'password', 'dob'];

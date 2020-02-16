@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSortModule } from '@angular/material/sort';
 import { MatOptionModule } from '@angular/material/core';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
+import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AdminHomeComponent } from './components/admin-home/admin-home.component
     MatFormFieldModule,
     MatPaginatorModule,
     MatSortModule,
-    MatOptionModule
+    MatOptionModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
