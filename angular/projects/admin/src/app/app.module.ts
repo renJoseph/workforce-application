@@ -11,6 +11,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatOptionModule } from '@angular/material/core';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { MatButtonModule } from "@angular/material/button";
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { MatButtonModule } from "@angular/material/button";
     MatPaginatorModule,
     MatSortModule,
     MatOptionModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,16 +13,25 @@ export class ViewUserComponent implements OnInit {
   public userData: User;
 
   constructor(
-    private user: UsersService,
+    private userService: UsersService,
     private aR: ActivatedRoute
   ) { }
 
   ngOnInit() {
     let id = this.aR.snapshot.params.id;
-    this.user.getUserByID(id).subscribe((data) => {
+    this.userService.getUserByID(id).subscribe((data) => {
       this.userData = data;
       console.log(this.userData);
     });
+  }
+
+  updateUser(){
+    this.userService.updateUser(this.aR.snapshot.params.id, this.userData).subscribe();
+    console.log(this.userData);
+  }
+
+  deleteUser(){
+    this.userService.deleteUser(this.aR.snapshot.params.id).subscribe();
   }
 
 }

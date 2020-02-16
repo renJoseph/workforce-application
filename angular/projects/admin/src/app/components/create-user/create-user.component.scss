@@ -1,0 +1,18 @@
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}
+.input-container{
+    border-radius: 20px;
+    min-width: 300px;
+}
+.input-item{
+
+}
+input::placeholder{
+    font-size: calc(0.5em + 0.5vw + 0.5vh);
+}
