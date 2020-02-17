@@ -10,16 +10,24 @@ import { User } from 'src/models/user.model';
 })
 export class CreateUserComponent implements OnInit {
 
-  public userData;
+  public userData: User;
 
   constructor(
     private userService: UsersService) { }
 
   ngOnInit() {
+      this.userData = {
+        role: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        dob: ""
+    };
   }
 
-  createUser(){
-    this.userService.createUser(this.userData).subscribe();
+  createUser(userData){
+    this.userService.createUser(userData).subscribe();
   }
 
 }

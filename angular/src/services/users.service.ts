@@ -9,7 +9,7 @@ export class UsersService {
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type':  'application/json'
+      'Content-Type': 'application/json'
     })
   };
 
@@ -19,23 +19,23 @@ export class UsersService {
 
   base_url = "http://localhost:8080/users";
 
-  createUser(user){
+  createUser(user: User) {
     return this.http.post(this.base_url, user, this.httpOptions)
   }
 
-  getUserByID(id){
+  getUserByID(id) {
     return this.http.get<User>(this.base_url + "/" + id)
   }
 
-  getAllUsers(){
+  getAllUsers() {
     return this.http.get(this.base_url)
   }
 
-  updateUser(id, user: User){
+  updateUser(id, user: User) {
     return this.http.put(this.base_url + "/" + id, user, this.httpOptions)
   }
 
-  deleteUser(id){
+  deleteUser(id) {
     return this.http.delete(this.base_url + "/" + id)
   }
 

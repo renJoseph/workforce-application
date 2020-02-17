@@ -2,38 +2,38 @@
     <h1 style="text-align: center;">Create New User</h1>
     <hr>
    <div>
+    <div>
+        <label>First Name</label>
+        <br>
+        <input type="text" [(ngModel)]="userData.firstName">
+    </div>
+    <div>
+        <label>Surname</label>
+        <br>
+        <input type="text" [(ngModel)]="userData.lastName">
+    </div>
+    <div>
+        <label>Role</label>
+        <br>
+        <input type="text" [(ngModel)]="userData.role">
+    </div>
+    <div>
+        <label>Email</label>
+        <br>
+        <input type="text" [(ngModel)]="userData.email">
+    </div>
+    <div>
+        <label>Password</label>
+        <br>
+        <input type="text" [(ngModel)]="userData.password">
+    </div>
+    <div>
+        <label>Date of Birth</label>
+        <br>
+        <input type="text" [(ngModel)]="userData.dob">
+    </div>
         <div>
-            <label>First Name</label>
-            <br>
-            <input type="text" (firstName)="userData.firstName">
-        </div>
-        <div>
-            <label>Surname</label>
-            <br>
-            <input type="text" (lastName)="userData.lastName">
-        </div>
-        <div>
-            <label>Role</label>
-            <br>
-            <input type="text" (role)="userData.role">
-        </div>
-        <div>
-            <label>Email</label>
-            <br>
-            <input type="text" (email)="userData.email">
-        </div>
-        <div>
-            <label>Password</label>
-            <br>
-            <input type="text" (password)="userData.password">
-        </div>
-        <div>
-            <label>Date of Birth</label>
-            <br>
-            <input type="text" (dob)="userData.dob">
-        </div>
-        <div>
-            <button (click)="createUser()">Create</button>
+            <button (click)="createUser(userData)">Create</button>
         </div>
     </div>
 
