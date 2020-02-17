@@ -1,40 +1,54 @@
-<div style="margin-left: 5vw; margin-right: 5vw; align-items: center;">
+<div style="margin-left: 20vw; min-width: 400px; margin-right: 20vw; align-items: center;">
     <h1 style="text-align: center;">Create New User</h1>
     <hr>
-   <div>
-    <div>
-        <label>First Name</label>
-        <br>
-        <input type="text" [(ngModel)]="userData.firstName">
-    </div>
-    <div>
-        <label>Surname</label>
-        <br>
-        <input type="text" [(ngModel)]="userData.lastName">
-    </div>
-    <div>
-        <label>Role</label>
-        <br>
-        <input type="text" [(ngModel)]="userData.role">
-    </div>
-    <div>
-        <label>Email</label>
-        <br>
-        <input type="text" [(ngModel)]="userData.email">
-    </div>
-    <div>
-        <label>Password</label>
-        <br>
-        <input type="text" [(ngModel)]="userData.password">
-    </div>
-    <div>
-        <label>Date of Birth</label>
-        <br>
-        <input type="text" [(ngModel)]="userData.dob">
-    </div>
-        <div>
-            <button (click)="createUser(userData)">Create</button>
+    <br>
+    <div class="row">
+        <div class="col"></div>
+        <div class="input-container col">
+            <div class="input-item">
+                <br>
+                <label>First Name</label>
+                <br>
+                <input type="text" [(ngModel)]="userData.firstName">
+            </div>
+            
+            <div class="input-item">
+                <label>Surname</label>
+                <br>
+                <input type="text" [(ngModel)]="userData.lastName">
+            </div>
+            
+            <div class="input-item">
+                <label>Role</label>
+                <br>
+                <input type="text" [(ngModel)]="userData.role">
+            </div>
+            
+            <div class="input-item">
+                <label>Email</label>
+                <br>
+                <input type="text" [(ngModel)]="userData.email">
+            </div>
+            
+            <div class="input-item">
+                <label>Password</label>
+                <br>
+                <input type="text" [(ngModel)]="userData.password">
+            </div>
+            
+            <div class="input-item">
+                <label>Date of Birth</label>
+                <br>
+                <input type="text" [(ngModel)]="userData.dob">
+            </div>
+            
+            <div>
+                <button class="wf-btn" (click)="createUser(userData)">Create</button>
+            </div>
+            <br>
         </div>
+        <div class="col"></div>
     </div>
+
 
 </div>

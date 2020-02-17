@@ -21,13 +21,11 @@ export class ViewUserComponent implements OnInit {
     let id = this.aR.snapshot.params.id;
     this.userService.getUserByID(id).subscribe((data) => {
       this.userData = data;
-      console.log(this.userData);
     });
   }
 
   updateUser(){
     this.userService.updateUser(this.aR.snapshot.params.id, this.userData).subscribe();
-    console.log(this.userData);
   }
 
   deleteUser(){
