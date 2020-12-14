@@ -1,5 +1,8 @@
 # workforce-application
 
+Report: https://docs.google.com/document/d/1LYqcFuLOEnyh7Zue1GVZjb7PNSKRwXrxwSlNLJfcJ_c/edit?usp=sharing
+Presentation slides: https://docs.google.com/presentation/d/1HlO_XLpD0kdLut9IH3sdENldZYqg09Md_l_-7Gt0BQM/edit?usp=sharing
+
 Approach
 
 You have been assigned to work on a project by ABC consulting group. ABC consulting has approved your bid to develop an appropriate artefact (e.g. a technical solution which can be a piece of software, robot model, computer game etc.) related to your chosen area which has to be agreed by your workshop tutor. 
